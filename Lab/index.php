@@ -5,16 +5,12 @@
     $spiderman->sayOneliner();
 ?>
 
+<br>
+
 <?php
     require "Avenger.php";
     $thor = new Avenger('Thor', 'Male', 'For Asgard!');
+    print_r('<pre>' .$thor. '</pre>');
     $thor->sayOneliner();
-    print_r('<pre>'.$thor. '</pre>');
 ?>
 
-<?php 
-    require "Agents.php";
-    $Jett = new Agents('Valorant', 'hahaha easy!');
-    $Jett->sayOneliner();
-    print_r('<pre>'.$Jett.'</pre>');
-?>

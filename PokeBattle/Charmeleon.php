@@ -4,9 +4,9 @@
         public function __construct(){
             $name = "Charmeleon";
             $energyType = "Fire";
-            $hitPoints =  "60";
-            $health = "60";
-            $attacks = ["Head Butt => 10, Flare => 30"];
+            $hitPoints = 60;
+            $health = 60;
+            $attacks = ["attackOneName" => "Head Butt", "attack1" => "10", "attackTwoName" => "Flare", "attack2" => "30"];
             $weakness = ["Water => 2"];
             $resistance = ["Lightning => 10"];
 

@@ -1,22 +1,39 @@
-<?php
-    require "pokemons.php";
-    $pokemon1 = new pokemon('Pika', 'Lightning', '60', '60', 'Electric Ring[50], Pika Punch[20]', 'Fire[1.5]', 'Fighting[20]');
-    print_r('<pre>'. $pokemon1 . '</pre>');
-?>
+<style>
+
+    body{
+        background-image: url("image.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width:100%;
+        height:100%;
+    }
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <br><br>
-Pikachu:
-<?php
-    require "Pikachu.php";
-    $pikachu = new Pikachu('');
-    print_r('<pre>'. $pikachu . '</pre>');
-?>
 
-<br><br>
-Charmeleon:
+<h1 class="text-center">Pikachu VS Charmeleon</h1>
+
 <?php 
+    require "pokemons.php";
+    require "Pikachu.php";
     require "Charmeleon.php";
+    $pikachu = new Pikachu('');
     $charmeleon = new Charmeleon('');
-    print_r('<pre>' . $charmeleon . '</pre>');
+
+    
+    echo "<br><br><br>";
+    print_r( $pikachu->name . " vs " . $charmeleon->name ."<br><br>");
+    print_r("Pikachu's health: " . $pikachu->health ."<br><br>");
+    print_r("Charmeleon's health: " . $charmeleon->health ."<br><br>");
+    print_r("Pikachu attacks with " . $pikachu->attacks["attackOneName"] . "<br><br>");
+    print_r("Charmeleon now has " . $charmeleon->health = $charmeleon->health - $pikachu->attacks["attack1"] . " health" . "<br><br>");
+    print_r("Charmeleon attacks with " . $charmeleon->attacks["attackTwoName"] . "<br><br>");
+    print_r("Pikachu now has " . $pikachu->health = $pikachu->health - $charmeleon->attacks["attack2"] . " health" . "<br><br>");
+
+
+
 
 ?>
