@@ -1,5 +1,4 @@
 <style>
-
     body{
         background-image: url("image.png");
         background-position: center;
@@ -7,7 +6,6 @@
         width:100%;
         height:100%;
     }
-
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,10 +27,20 @@
     print_r("Pikachu's health: " . $pikachu->health ."<br><br>");
     print_r("Charmeleon's health: " . $charmeleon->health ."<br><br>");
     print_r("Pikachu attacks with " . $pikachu->attacks["attackOneName"] . "<br><br>");
-    print_r("Charmeleon now has " . $charmeleon->health = $charmeleon->health - $pikachu->attacks["attack1"] . " health" . "<br><br>");
-    print_r("Charmeleon attacks with " . $charmeleon->attacks["attackTwoName"] . "<br><br>");
-    print_r("Pikachu now has " . $pikachu->health = $pikachu->health - $charmeleon->attacks["attack2"] . " health" . "<br><br>");
 
+    if($charmeleon->weakness["weakness"] == $pikachu->energyType){
+        print_r("Charmeleon's health: " . $charmeleon->health = $pikachu->attacks["attack1"] * $charmeleon->weakness["multiplier"]);
+    }
+
+    else if($charmeleon->resistance["resistance"] == $pikachu->energyType){
+        print_r("Charmeleon now has " . $charmeleon->health = $pikachu->attacks["attack1"] - $charmeleon->resistance["multiplier"] . " health" . "<br><br>");
+    }
+
+    print_r("Charmeleon attacks with " . $charmeleon->attacks["attackTwoName"] . "<br><br>");
+
+    if($pikachu->weakness["weakness"] == $charmeleon->energyType){
+        print_r("Pikachu now has " . $pikachu->health = $charmeleon->attacks["attack2"] * $pikachu->weakness["multiplier"] - $pikachu->health . " health" . "<br><br>");
+    }
 
 
 
