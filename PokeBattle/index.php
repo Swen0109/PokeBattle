@@ -33,7 +33,7 @@
     }
 
     else if($charmeleon->resistance["resistance"] == $pikachu->energyType){
-        print_r("Charmeleon now has " . $charmeleon->health = $pikachu->attacks["attack1"] - $charmeleon->resistance["multiplier"] . " health" . "<br><br>");
+        print_r("Charmeleon now has " . $charmeleon->health = $pikachu->attacks["attack2"] - $charmeleon->resistance["multiplier"] . " health" . "<br><br>");
     }
 
     print_r("Charmeleon attacks with " . $charmeleon->attacks["attackTwoName"] . "<br><br>");
@@ -42,6 +42,22 @@
         print_r("Pikachu now has " . $pikachu->health = $charmeleon->attacks["attack2"] * $pikachu->weakness["multiplier"] - $pikachu->health . " health" . "<br><br>");
     }
 
+    else if($pikachu->resistance["resistance"] == $charmeleon->energyType){
+        print_r("Pikachu now has " . $pikachu->health = $charmeleon->attacks["attack2"] - $pikachu->resistance["multiplier"] . " health" . "<br><br>");
+    }
 
+    print_r("Population is: " . pokemon::$population . "<br><br>");
+
+    if($pikachu->hitPoints <= 0){
+        unset($pikachu);
+        pokemon::$population--;
+    }
+
+    else if($charmeleon->hitPoints <= 0){
+        unset($charmeleon);
+        pokemon::$population--;
+    }
+
+    print_r("Population is: " . pokemon::$population);
 
 ?>

@@ -2,6 +2,7 @@
 
     class pokemon{
 
+        public static $population = 0;
         public $name;
         public $energyType;
         public $hitPoints;
@@ -18,6 +19,7 @@
             $this->attacks = $attacks;
             $this->weakness = $weakness;
             $this->resistance = $resistance;
+            self::$population++;
         }
 
         public function __toString(){
