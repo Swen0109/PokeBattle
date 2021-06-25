@@ -1,15 +1,15 @@
 <?php 
 
-    class Pikachu extends pokemon{
+    class Pikachu extends pokemons{
 
         public function __construct(){
-            $name = "Pika";
+            $name = "Pikachu";
             $energyType = "lightning";
             $hitPoints = 60;
             $health = 60;
-            $attacks = ["attackOneName" => "Electric Ring", "attack1" => "50", "attackTwoName" => "Pika Punch", "attack2" => "20"];
-            $weakness = ["weakness" => "fire", "multiplier" => "1.5"];
-            $resistance = ["resistance" => "fighting", "multiplier" => "20"];
+            $attacks = [ new attack("electric ring", 50), new attack("pika punch", 20)];
+            $weakness = [ new weakness("fire", 1.5)];
+            $resistance = [new resistance("fighting", 20)];
             parent::__construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance);
         }
     }
